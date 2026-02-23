@@ -1,0 +1,8 @@
+/* For information on how to create your own theme, please see:
+http://ionicframework.com/docs/theming/ */
+
+img, ion-img {
+  filter: none !important;
+  opacity: 1 !important;
+}
+
