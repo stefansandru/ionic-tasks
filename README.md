@@ -1,16 +1,10 @@
-# 📋 TaskFlow — Ionic React Task Manager
+# TaskFlow — Ionic React Task Manager
 
 A full-stack cross-platform **task management application** built with **Ionic React** and a **Node.js (Koa)** backend. Features real-time synchronization, offline support, camera integration, geolocation with interactive maps, and JWT authentication.
 
-![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)
-![Ionic](https://img.shields.io/badge/Ionic-8-3880FF?logo=ionic&logoColor=white)
-![Capacitor](https://img.shields.io/badge/Capacitor-7-119EFF?logo=capacitor&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-Koa-339933?logo=node.js&logoColor=white)
-
 ---
 
-## ✨ Features
+## Features
 
 ### Core Functionality
 - **Full CRUD Operations** — Create, read, update, and delete tasks with a clean, intuitive interface
@@ -30,18 +24,18 @@ A full-stack cross-platform **task management application** built with **Ionic R
 - **Optimistic UI Updates** — Immediate local feedback before server confirmation
 
 ### Native Device Features (via Capacitor)
-- **📸 Photo Capture** — Take photos directly from the camera and attach them to tasks
-- **📍 Geolocation** — Capture current GPS position and assign it to tasks
-- **🗺️ Interactive Maps** — Leaflet/OpenStreetMap integration for viewing and selecting task locations
+- **Photo Capture** — Take photos directly from the camera and attach them to tasks
+- **Geolocation** — Capture current GPS position and assign it to tasks
+- **Interactive Maps** — Leaflet/OpenStreetMap integration for viewing and selecting task locations
 
 ### UI/UX
-- **🌙 Dark Mode** — Automatic system-preference-based dark/light theme
+- **Dark Mode** — Automatic system-preference-based dark/light theme
 - **Smooth Animations** — Custom modal and list item animations using Ionic's Animation API
 - **Responsive Design** — Optimized for mobile, tablet, and desktop viewports
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 ┌─────────────────────────────────┐           ┌──────────────────────────────┐
@@ -67,7 +61,7 @@ A full-stack cross-platform **task management application** built with **Ionic R
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Layer | Technology |
 |-------|-----------|
@@ -86,7 +80,7 @@ A full-stack cross-platform **task management application** built with **Ionic R
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -124,23 +118,23 @@ npx ionic capacitor open android  # opens in Android Studio / Xcode
 
 ---
 
-## 📡 API Endpoints
+## API Endpoints
 
 | Method | Endpoint | Description | Auth |
 |--------|----------|-------------|------|
-| `POST` | `/api/auth/login` | User login, returns JWT | ❌ |
-| `POST` | `/api/auth/signup` | User registration | ❌ |
-| `GET` | `/api/item` | Get paginated tasks | ✅ |
-| `GET` | `/api/item/:id` | Get a single task | ✅ |
-| `POST` | `/api/item` | Create a new task | ✅ |
-| `PUT` | `/api/item/:id` | Update a task | ✅ |
-| `DELETE` | `/api/item/:id` | Delete a task | ✅ |
+| `POST` | `/api/auth/login` | User login, returns JWT | No |
+| `POST` | `/api/auth/signup` | User registration | No |
+| `GET` | `/api/item` | Get paginated tasks | Yes |
+| `GET` | `/api/item/:id` | Get a single task | Yes |
+| `POST` | `/api/item` | Create a new task | Yes |
+| `PUT` | `/api/item/:id` | Update a task | Yes |
+| `DELETE` | `/api/item/:id` | Delete a task | Yes |
 
 WebSocket connection available at `ws://localhost:3000` (authenticated via JWT token query parameter).
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 ├── my-node-server-auth/          # Backend
@@ -181,7 +175,7 @@ WebSocket connection available at `ws://localhost:3000` (authenticated via JWT t
 
 ---
 
-## 🧪 Testing
+## Testing
 
 ### End-to-End Tests (Cypress)
 
@@ -199,7 +193,7 @@ npm test
 
 ---
 
-## 🔑 Key Design Patterns
+## Key Design Patterns
 
 - **React Context + useReducer** — Centralized, predictable state management without external dependencies
 - **Optimistic Updates** — Mutations apply locally first, with rollback on failure and offline queuing
@@ -210,6 +204,6 @@ npm test
 
 ---
 
-## 📄 License
+## License
 
 This project is open source and available under the [MIT License](LICENSE).
